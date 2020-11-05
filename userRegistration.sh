@@ -64,42 +64,9 @@ function passwordAtLeastOneUpperCase(){
 	echo "Enter the password at least one upper case"
 	passwordCharacters
 }
-
-#TO FUNCTION  PASSWORD AT LEAST ONE NUMERIC NUMBER
-function atLeastOneNumericNumber(){
-	echo "Enter the password rule 3"
-	read passwordNumber
-	pat="^[A-Z0-9a-z]{8,}"
-
-	#TO CHECK THE PASSWORD RULE 3
-	if [[ $passwordNumber =~ $pat ]]
-	then
-		echo "valid password"
-	else
-		echo "invalid password"
-	fi
-}
-
-#FUNCTION TO PASSWORD HAS EXACTLY ONE SPECIAL CHARACTER
-function specialCharacters(){
-	echo "Enter the password rule 4"
-	read specialCharacter
-	pat="^[A-Z0-9a-z\\]{8,}"
-
-	#TO CHECK THE PASSWORD RULE 3
-	if [[ $specialCharacter =~ $pat ]]
-	then
-		echo "VALID PASSWORD"
-	else
-		echo "INVALID PASSWORD"
-	fi
-
-}
 username
 lastname
 email
 mobileNumber
 passwordCharacters
-passwordAtLeastOneUpperCase
-atLeastOneNumericNumber
-specialCharacters
+
