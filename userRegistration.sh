@@ -35,11 +35,25 @@ function email(){
 	#CONDITION TO CHECK VALID AND INVALID
 	if [[ $email =~ $pat ]]
 	then
-		echo "valid email"
+		echo "VALID EMAIL"
 	else
-		echo "invalid email"
+		echo "VALID EMAIL"
+	fi
+}
+#TO FUNCTION MOBILE
+function mobileNumber(){
+	echo "Enter the mobile number"
+	read number
+	pat="(0/91)?[7-9][0-9]{9}"
+	#TO CHECK THE VALID AND INVALID EMAIL
+	if [[ $number =~ $pat ]]
+	then
+		echo "VALID NUMBER"
+	else
+		echo "VALID NUMBER"
 	fi
 }
 username
 lastname
 email
+mobileNumber
