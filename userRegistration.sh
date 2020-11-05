@@ -44,7 +44,7 @@ function email(){
 function mobileNumber(){
 	echo "Enter the mobile number"
 	read number
-	pat="(0/91)?[7-9][0-9]{9}"
+	pat="[0-9]"
 	#TO CHECK THE VALID AND INVALID EMAIL
 	if [[ $number =~ $pat ]]
 	then
@@ -56,14 +56,32 @@ function mobileNumber(){
 #TO FUNCTION PASSWORD CHARACTERS
 function passwordCharacters(){
 	echo "Enter the minimum eight characters"
-	username
+	read word
+	pat=[a-zA-z]{8,}
+#CONDITION TO CHECK VALID AND INVALID
+	if [[ $word =~ $pat ]]
+	then
+	echo "VALID "
+	else
+	echo "INVALID"
+	fi
 }
+
 
 #TO FUNCTION PASSWORD AT LEAST UPPER CASE
 function passwordAtLeastOneUpperCase(){
 	echo "Enter the password at least one upper case"
-	passwordCharacters
+	read word
+	pat=[a-zA-z]{8,}
+#CONDITION TO CHECK VALID AND INVALID
+	if [[ $word =~ $pat ]]
+	then
+	echo "VALID "
+	else
+	echo "INVALID"
+	fi
 }
+	
 
 #TO FUNCTION  PASSWORD AT LEAST ONE NUMERIC NUMBER
 function atLeastOneNumericNumber(){
