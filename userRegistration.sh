@@ -1,15 +1,15 @@
 #!/bin/bash/
-#FUNCTION FOR USERNAME
-function username(){
-echo "Enter User Name" 
+#FUNCTION FOR LASTNAME
+function lastname(){
+echo "Enter Last Name" 
 read word
 pat=[a-zA-z]{3,}
 #CONDITION TO CHECK VALID AND INVALID
 if [[ $word =~ $pat ]]
 then
-	echo "VALID USERNAME"
+	echo "VALID LASTNAME"
 else
-	echo "INVALID USERNAME"
+	echo "INVALID LASTNAME"
 fi
 }
-username
+lastname
